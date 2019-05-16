@@ -11,9 +11,10 @@ foreach ($item in $dircontents)
 }
 # display parent directory
 $parent = (Get-Item . ).Parent
-echo "parent"
-$parent
+Write-Output "parent"
+$parent.FullName
+$parent.GetDirectories()
 
 # display sibling directories
-$sibs = Get-ChildItem $parent
-$sibs
+#$sibs = Get-ChildItem $parent
+#$sibs
